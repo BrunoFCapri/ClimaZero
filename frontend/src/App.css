@@ -1,0 +1,259 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+  color: #1a2233;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background: #fff;
+  color: #1a2233;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(26,34,51,0.06);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+
+.App-logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 8px #bfa14a33);
+}
+
+
+
+h1 {
+  margin: 0.2em 0 0.1em 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.App-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+}
+
+.scroll-container {
+  width: 100%;
+  max-width: 700px;
+  overflow-x: auto;
+  overflow-y: visible;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #bfa14a #f8fafc;
+  transition: box-shadow 0.3s;
+  background: #fff;
+  border-radius: 18px;
+  border: 1.5px solid #e5e7eb;
+  position: relative;
+  z-index: 1;
+}
+.scroll-container:hover {
+  box-shadow: 0 0 24px 2px #bfa14a22;
+}
+
+.data-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(26,34,51,0.04);
+  border-radius: 14px;
+  overflow: hidden;
+  font-size: 1.08rem;
+  min-width: 600px;
+  transition: box-shadow 0.3s;
+}
+
+.data-table th, .data-table td {
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+}
+
+.data-table th {
+  background: #f8fafc;
+  color: #1a2233;
+  font-weight: 700;
+  border-bottom: 2px solid #bfa14a;
+}
+
+.data-table tr {
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.data-table tr:hover {
+  background: #f5f5f5;
+  box-shadow: 0 4px 16px #bfa14a33;
+  z-index: 2;
+}
+
+.App-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #bfa14a;
+  font-size: 1rem;
+  background: none;
+  letter-spacing: 1px;
+}
+
+
+.forecast-cards-container {
+  background: #f4f7fa;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #bfa14a11;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  max-width: 600px;
+  margin: 2.5rem auto 0 auto;
+}
+.forecast-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-align: left;
+  margin-bottom: 0.7rem;
+  margin-left: 1.2rem;
+  letter-spacing: 0.04em;
+}
+.forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px #bfa14a11;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+  transition: box-shadow 0.2s, background 0.2s;
+  border-left: 4px solid #ffe082;
+}
+.forecast-card.today {
+  border-left: 4px solid #FFD600;
+  background: #fdf6e3;
+}
+.forecast-date {
+  min-width: 60px;
+  text-align: left;
+}
+.forecast-day {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2233;
+  margin-bottom: 0.1rem;
+}
+.forecast-fecha {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+.forecast-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.forecast-temp {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffb300;
+  min-width: 90px;
+}
+.temp-max {
+  margin-left: 0.2rem;
+  margin-right: 0.3rem;
+}
+.temp-min {
+  font-size: 1.1rem;
+  color: #bfa14a;
+  font-weight: 400;
+}
+.forecast-desc {
+  flex: 1;
+  min-width: 120px;
+  text-align: left;
+  font-size: 1.08rem;
+  color: #1a2233;
+}
+.forecast-desc-sec {
+  font-size: 0.98rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin-top: 0.1rem;
+}
+.forecast-hum {
+  min-width: 60px;
+  text-align: right;
+  font-size: 1.1rem;
+  color: #1a2233;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .forecast-cards-container {
+    padding: 0.5rem 0.1rem 0.1rem 0.1rem;
+  }
+  .forecast-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  }
+  .forecast-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .forecast-hum {
+    margin-top: 0.2rem;
+  }
+}
+
